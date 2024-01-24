@@ -49,9 +49,13 @@ function! s:sexp_mappings() abort
   "   exe s:map('o', 'E', '<Plug>(sexp_move_to_next_element_tail)')
   " endif
 
-  exe s:map('n', '<I', '<Plug>(sexp_insert_at_list_head)')
-  exe s:map('n', '>I', '<Plug>(sexp_insert_at_list_tail)')
-  exe s:map('n', '<f', '<Plug>(sexp_swap_list_backward)')
+  " My own keymapping additions
+  exe s:map('n', '<h', '<Plug>(sexp_insert_at_list_head)')
+  exe s:map('n', '>l', '<Plug>(sexp_insert_at_list_tail)')
+  exe s:map('n', '<H', '<Plug>(sexp_round_head_wrap_list)')
+  exe s:map('n', '>L', '<Plug>(sexp_round_tail_wrap_tail)')
+  exe s:map('n', 'dof', '<Plug>(sexp_raise_list)%')
+
   exe s:map('n', '>f', '<Plug>(sexp_swap_list_forward)')
   exe s:map('n', '<e', '<Plug>(sexp_swap_element_backward)')
   exe s:map('n', '>e', '<Plug>(sexp_swap_element_forward)')
